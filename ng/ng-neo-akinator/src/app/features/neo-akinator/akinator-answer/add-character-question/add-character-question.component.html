@@ -1,0 +1,29 @@
+<div class="add-character-question" *ngIf="data">
+  <div class="title">
+    <span>{{(data.dialogType === '0') ? 'キャラクタ登録' : '質問登録'}}</span>
+  </div>
+  <div class="content">
+    <form [formGroup]="myControl">
+      <mat-form-field class="input">
+        <input
+          matInput
+          type="text"
+          placeholder="{{(data.dialogType === '0') ? 'キャラクタ名称' : '質問内容'}}"
+          formControlName="text"
+          class=""
+        />
+        <button
+          type="button"
+          mat-flat-button
+          color="primary"
+          matSuffix
+          [disabled]="!myControl.valid"
+          (click)="buttoonClick()"
+        ><span>登録</span></button>
+        <mat-error *ngIf="myControl.controls.text.touched && myControl.controls.text.errors?.required">
+          <span>必須項目です</span>
+        </mat-error>
+      </mat-form-field>
+    </form>
+  </div>
+</div>

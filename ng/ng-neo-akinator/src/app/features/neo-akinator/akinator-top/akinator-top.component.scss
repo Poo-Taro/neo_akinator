@@ -1,0 +1,93 @@
+/*
+ アキネータートップスタイル
+
+ created on 2020/03/10
+ @Author Taro Suzuki
+*/
+
+
+.akinator-top {
+  width: 70%;
+  height: calc(100% - 140px);
+  min-width: 896px;
+  z-index: 50;
+  position: relative;
+  top: 70px;
+  margin: auto;
+
+  .character {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background: url(../../../../assets/image/character/akinator.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .comment1 {
+    width: 240px;
+    height: 60px;
+    position: relative;
+    top: 26%;
+    left: -16%;
+  }
+
+  .comment2 {
+    width: 275px;
+    height: 94px;
+    position: relative;
+    top: 27%;
+    right: -72%;
+  }
+
+  .bottons {
+    width: 100%;
+    bottom: 24%;
+    position: absolute;
+    text-align: center;
+    z-index: 400;
+    .start-button {
+      display: inline-block;
+      button{
+        background:#1AAB8A;
+        color:#fff;
+        border:none;
+        position:relative;
+        height:60px;
+        font-size:1.6em;
+        padding:0 2em;
+        cursor:pointer;
+        transition:800ms ease all;
+        outline:none;
+      }
+      button:hover{
+        background:#fff;
+        color:#1AAB8A;
+      }
+      button:before,button:after{
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        height:2px;
+        width:0;
+        background: #1AAB8A;
+        transition:400ms ease all;
+      }
+      button:after{
+        right:inherit;
+        top:inherit;
+        left:0;
+        bottom:0;
+      }
+      button:hover:before,button:hover:after{
+        width:100%;
+        transition:800ms ease all;
+      }
+    }
+  }
+}
+
+

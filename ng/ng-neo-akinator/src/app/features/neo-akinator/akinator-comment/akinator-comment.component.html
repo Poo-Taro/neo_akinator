@@ -1,0 +1,22 @@
+<div class="akinator-comment"
+  [style.width]="commentWidth"
+  [style.height]="commentHeight">
+  <div class="comment-main"
+    [class.comment-top-left]="(commentType === '01')"
+    [class.comment-top-center]="(commentType === '02')"
+    [class.comment-top-right]="(commentType === '03')"
+    [class.comment-bottom-left]="(commentType === '04')"
+    [class.comment-bottom-center]="(commentType === '05')"
+    [class.comment-bottom-right]="(commentType === '06')"
+    [class.comment-left-top]="(commentType === '07')"
+    [class.comment-left-middle]="(commentType === '08')"
+    [class.comment-left-bottom]="(commentType === '09')"
+    [class.comment-right-top]="(commentType === '10')"
+    [class.comment-right-middle]="(commentType === '11')"
+    [class.comment-right-bottom]="(commentType === '12')"
+  >
+    <div class="comment-inner">
+      <span>{{comment}}</span>
+    </div>
+  </div>
+</div>

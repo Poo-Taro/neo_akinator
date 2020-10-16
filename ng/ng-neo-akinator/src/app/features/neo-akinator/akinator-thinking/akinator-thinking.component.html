@@ -1,0 +1,62 @@
+<div class="akinator-thinking">
+  <div class="thinking-character"
+    [class]="characterClass"
+  >
+  </div>
+  <div class="thinking-select">
+    <div class="comment">
+      <app-akinator-comment
+        [commentWidth]="'100%'"
+        [commentHeight]="'100%'"
+        [commentType]="'08'"
+        [comment]="question"
+      >
+      </app-akinator-comment>
+    </div>
+    <div class="select">
+      <div class="thinking-select-buttons">
+        <app-akinator-button
+          [akinatorButtonType]="'はい'"
+          [akinatorButtonSizeType]="buttonSizeType"
+          (akinatorButtonClick)="buttonClick($event)"
+        >
+        </app-akinator-button>
+      </div>
+      <div class="thinking-select-buttons">
+        <app-akinator-button
+          [akinatorButtonType]="'いいえ'"
+          [akinatorButtonSizeType]="buttonSizeType"
+          (akinatorButtonClick)="buttonClick($event)"
+        >
+        </app-akinator-button>
+      </div>
+      <div class="thinking-select-buttons">
+        <app-akinator-button
+          [akinatorButtonType]="'わからない'"
+          [akinatorButtonSizeType]="buttonSizeType"
+          (akinatorButtonClick)="buttonClick($event)"
+        >
+        </app-akinator-button>
+      </div>
+      <div class="thinking-select-buttons">
+        <app-akinator-button
+          [akinatorButtonType]="'たぶんそう'"
+          [akinatorButtonSizeType]="buttonSizeType"
+          (akinatorButtonClick)="buttonClick($event)"
+        >
+        </app-akinator-button>
+      </div>
+      <div class="thinking-select-buttons">
+        <app-akinator-button
+          [akinatorButtonType]="'たぶん違う'"
+          [akinatorButtonSizeType]="buttonSizeType"
+          (akinatorButtonClick)="buttonClick($event)"
+        >
+        </app-akinator-button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

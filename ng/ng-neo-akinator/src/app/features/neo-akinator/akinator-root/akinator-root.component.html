@@ -1,0 +1,26 @@
+<app-akinator-header></app-akinator-header>
+<div class="akinator-root">
+  <ng-container *ngIf="screenType === '0'">
+    <app-akinator-top
+      (playStart)="playStart()"
+    ></app-akinator-top>
+  </ng-container>
+  <ng-container *ngIf="screenType === '1'">
+    <app-akinator-thinking
+      [question]="questionInfo.question_content"
+      (akinatorButtonClick)="getQuestionAnswer($event)"
+    ></app-akinator-thinking>
+  </ng-container>
+  <ng-container *ngIf="screenType === '2'">
+    <app-akinator-answer
+      [questionInfo]="questionInfo"
+    ></app-akinator-answer>
+  </ng-container>
+</div>
+<app-akinator-footer></app-akinator-footer>
+<app-background-rhombus></app-background-rhombus>
+<app-background-wind></app-background-wind>
+
+
+
+

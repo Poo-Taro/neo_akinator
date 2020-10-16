@@ -1,0 +1,33 @@
+<div class="akinator-top">
+  <div class="character">
+    <div class="comment1">
+      <app-akinator-comment
+        [commentWidth]="'100%'"
+        [commentHeight]="'100%'"
+        [commentType]="'10'"
+        [comment]="'やあ、私はアキネーターです'"
+      >
+      </app-akinator-comment>
+    </div>
+    <div class="comment2">
+      <app-akinator-comment
+        [commentWidth]="'100%'"
+        [commentHeight]="'100%'"
+        [commentType]="'07'"
+        [comment]="'有名な人物やキャラクターを思い浮かべて、魔人が誰でも当ててみせよう。魔人は何でもお見通しさ'"
+      >
+      </app-akinator-comment>
+    </div>
+  </div>
+  <div class="bottons">
+    <div class="start-button">
+      <button
+        type="button"
+        (click)="clickPlayButton()"
+      >
+        <span>プレイする</span>
+      </button>
+    </div>
+  </div>
+</div>
+

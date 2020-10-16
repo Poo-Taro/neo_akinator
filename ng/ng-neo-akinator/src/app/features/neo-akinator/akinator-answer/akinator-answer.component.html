@@ -1,0 +1,116 @@
+<div class="akinator-answer">
+  <div class="answer-character"
+    [class]="characterClass"
+  >
+  </div>
+  <div class="answer-containts" *ngIf="questionInfo">
+    <ng-container *ngIf="screenCd === '0'">
+      <div class="comment1">
+        <app-akinator-comment
+          [commentWidth]="'100%'"
+          [commentHeight]="'100%'"
+          [commentType]="'08'"
+          [comment]="'あなたが想像していたのは 「' + questionInfo.character_name + '」 ですか？'"
+        >
+        </app-akinator-comment>
+      </div>
+      <div class="select">
+        <div class="answer-buttons">
+          <app-akinator-button
+            [akinatorButtonType]="'はい'"
+            [akinatorButtonSizeType]="buttonSizeType"
+            (akinatorButtonClick)="answerButtonClick($event)"
+          >
+          </app-akinator-button>
+        </div>
+        <div class="answer-buttons">
+          <app-akinator-button
+            [akinatorButtonType]="'いいえ'"
+            [akinatorButtonSizeType]="buttonSizeType"
+            (akinatorButtonClick)="answerButtonClick($event)"
+          >
+          </app-akinator-button>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="screenCd === '1'">
+      <div class="comment2">
+        <app-akinator-comment
+          [commentWidth]="'100%'"
+          [commentHeight]="'100%'"
+          [commentType]="'08'"
+          [comment]="'新しい質問を追加しますか？'"
+        >
+        </app-akinator-comment>
+      </div>
+      <div class="new-question-buttons">
+        <div class="new-question-button">
+          <app-akinator-button
+            [akinatorButtonType]="'はい'"
+            [akinatorButtonSizeType]="buttonSizeType"
+            (akinatorButtonClick)="newQuestionButtonClick($event)"
+          >
+          </app-akinator-button>
+        </div>
+        <div class="new-question-button">
+          <app-akinator-button
+            [akinatorButtonType]="'いいえ'"
+            [akinatorButtonSizeType]="buttonSizeType"
+            (akinatorButtonClick)="newQuestionButtonClick($event)"
+          >
+          </app-akinator-button>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="screenCd === '2'">
+      <div class="comment3">
+        <app-akinator-comment
+          [commentWidth]="'100%'"
+          [commentHeight]="'100%'"
+          [commentType]="'08'"
+          [comment]="'あなたが想像していたキャラクターを教えてください'"
+        >
+        </app-akinator-comment>
+      </div>
+      <div class="forms">
+        <form [formGroup]="myControl">
+          <mat-form-field class="charactername-input">
+            <input
+              matInput
+              type="text"
+              placeholder="キャラクタ名"
+              formControlName="characterName"
+              class=""
+            />
+            <button
+              type="button"
+              mat-flat-button
+              color="primary"
+              matSuffix
+              [disabled]="!myControl.valid"
+              (click)="searchCharacter()"
+            ><span>検索</span></button>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="answers" *ngIf="characterList">
+        <button
+          type="button"
+          mat-flat-button
+          matSuffix
+          class="buttons"
+          (click)="showAddCharacterDialog()"
+        ><span>この中にはいない</span></button>
+        <ng-container *ngFor="let ch of characterList">
+          <button
+            type="button"
+            mat-flat-button
+            matSuffix
+            class="buttons"
+            (click)="characterButtonClick(ch.mstcharacter_id)"
+          ><span>{{ch.character_name}}</span></button>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>

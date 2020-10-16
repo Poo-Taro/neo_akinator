@@ -1,0 +1,138 @@
+/*
+ アキネーターアンサースタイル.
+
+  created on 2020/04/09
+  author Taro Suzuki
+*/
+
+
+.akinator-answer {
+  width: 70%;
+  height: calc(100% - 140px);
+  min-width: 896px;
+  z-index: 50;
+  position: relative;
+  top: 70px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+
+  .answer-character {
+    width: 50%;
+    height: 100%;
+  }
+
+  // キャラクタクラス ////////////////////////////////////
+  .character-1 {
+    background: url(../../../../assets/image/character/ch_1.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .character-2 {
+    background: url(../../../../assets/image/character/ch_2.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .character-3 {
+    background: url(../../../../assets/image/character/ch_3.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .character-4 {
+    background: url(../../../../assets/image/character/ch_4.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .character-5 {
+    background: url(../../../../assets/image/character/ch_5.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .character-6 {
+    background: url(../../../../assets/image/character/ch_6.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  /////////////////////////////////////////////////////
+
+  .answer-containts {
+    width: 50%;
+    height: 100%;
+
+    // タイプ1 ///////////////////////////////
+    .comment1 {
+      width: 100%;
+      height: 50%;
+    }
+
+    .select {
+      width: 100%;
+      height: calc(50% - 40px);
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .answer-buttons {
+        width: 80%;
+        height: 30px;
+        margin: auto;
+      }
+    }
+    //////////////////////////////////////////
+
+    // タイプ2 ///////////////////////////////
+    .comment2 {
+      width: 100%;
+      height: 100px;
+    }
+
+    .new-question-buttons {
+      width: 100%;
+      height: 150px;
+      margin-top: 20px;
+
+      .new-question-button {
+        width: 80%;
+        height: 30px;
+        margin: auto;
+      }
+    }
+    /////////////////////////////////////////
+
+    // タイプ3 //////////////////////////////
+    .comment3 {
+      width: 100%;
+      height: 50px;
+    }
+
+    .forms {
+      width: 100%;
+      height: 100px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255);
+      form {
+        width: 100%;
+        padding-top: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .charactername-input {
+          width: calc(100% - 40px);
+        }
+      }
+    }
+
+    .answers {
+      width: 100%;
+      height: calc(100% - 190px);
+      background: rgba(255, 255, 255);
+      overflow: auto;
+
+      .buttons {
+        width: 100%;
+      }
+
+    }
+    ////////////////////////////////////////
+
+  }
+}

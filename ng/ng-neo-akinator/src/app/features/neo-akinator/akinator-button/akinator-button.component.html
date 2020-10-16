@@ -1,0 +1,12 @@
+<div
+  class="akinator-button"
+  [class.auto-size-button]="
+    akinatorButtonSizeType === 'auto'
+    || akinatorButtonSizeType === undefined
+    || akinatorButtonSizeType === null
+  "
+  [class.custom-size-button]="akinatorButtonSizeType === 'custom'"
+  (click)="buttonClick()"
+>
+  <span class="button-inline-text">{{ akinatorButtonType }}</span>
+</div>

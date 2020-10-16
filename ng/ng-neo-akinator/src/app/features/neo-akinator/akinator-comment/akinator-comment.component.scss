@@ -1,0 +1,138 @@
+/**
+ * アキネーターコメントスタイル
+ *
+ * created on 2020/03/29
+ * author Taro Suzuki
+ */
+
+
+.akinator-comment {
+
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track{
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0 0 2px #777;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  .comment-main {
+    position: relative;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: 10px; /* 内側の余白 */
+    background: rgba(255, 255, 255);
+
+    .comment-inner {
+      position: absolute;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      word-wrap: break-word;
+      overflow: auto;
+      font-size: 16px;
+    }
+  }
+
+  .comment-main::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 20px; height: 20px; /* 吹き出しサイズ */
+    background: rgba(255, 255, 255, 0.765);
+  }
+
+  .comment-main::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.765);
+  }
+
+  .comment-main>* {
+    position: relative;
+    z-index: 3;
+  }
+
+  .comment-main,.comment-main::after {
+    box-shadow: 0 0 10px 0 rgba(163,163,163,0.50); /* ぼかし距離(第3引数)，拡散距離(第4引数)，色(第5引数) */
+  }
+
+  .comment-main,.comment-main::before,.comment-main::after {
+    color: #555;
+  }
+
+  // 吹き出し・上辺左側
+  .comment-top-left::before {
+    top: -10px; left: 10px; /* 位置 */
+    transform: rotate(45deg) skew(20deg,20deg); /* 傾斜角(skew) */
+  }
+  // 吹き出し・上辺中央
+  .comment-top-center::before {
+    top: -10px; left: 50%; /* 位置 */
+    transform: translateX(-50%) rotate(45deg) skew(20deg,20deg); /* 傾斜角(skew) */
+  }
+  // 吹き出し・上辺右側
+  .comment-top-right::before {
+    top: -10px; right: 10px; /* 位置 */
+    transform: rotate(45deg) skew(20deg,20deg); /* 傾斜角(skew) */
+  }
+
+  // 吹き出し・下辺左側
+  .comment-bottom-left::before {
+    bottom: -10px; left: 10px; /* 位置 */
+    transform: rotate(45deg) skew(20deg,20deg); /* 傾斜角(skew) */
+  }
+  // 吹き出し・下辺中央
+  .comment-bottom-center::before {
+    bottom: -10px; left: 50%; /* 位置 */
+    transform: translateX(-50%) rotate(45deg) skew(20deg,20deg); /* 傾斜角(skew) */
+  }
+  // 吹き出し・下辺右側
+  .comment-bottom-right::before {
+    bottom: -10px; right: 10px; /* 位置 */
+    transform: rotate(45deg) skew(20deg,20deg); /* 傾斜角(skew) */
+  }
+
+  /* 吹き出し・左辺上側 */
+  .comment-left-top::before {
+    left: -10px; top: 10px; /* 位置 */
+    transform: rotate(45deg) skew(-20deg,-20deg); /* 傾斜角(skew) */
+  }
+  /* 吹き出し・左辺中央 */
+  .comment-left-middle::before {
+    left: -10px; top: 50%; /* 位置 */
+    transform: translateY(-50%) rotate(45deg) skew(-20deg,-20deg); /* 傾斜角(skew) */
+  }
+  /* 吹き出し・左辺下側 */
+  .comment-left-bottom::before {
+    left: -10px; bottom: 10px; /* 位置 */
+    transform: rotate(45deg) skew(-20deg,-20deg); /* 傾斜角(skew) */
+  }
+
+  /* 吹き出し・右辺上側 */
+  .comment-right-top::before {
+    right: -10px; top: 10px; /* 位置 */
+    transform: rotate(45deg) skew(-20deg,-20deg); /* 傾斜角(skew) */
+  }
+  /* 吹き出し・右辺中央 */
+  .comment-right-middle::before {
+    right: -10px; top: 50%; /* 位置 */
+    transform: translateY(-50%) rotate(45deg) skew(-20deg,-20deg); /* 傾斜角(skew) */
+  }
+  /* 吹き出し・右辺下側 */
+  .comment-right-bottom::before {
+    right: -10px; bottom: 10px; /* 位置 */
+    transform: rotate(45deg) skew(-20deg,-20deg); /* 傾斜角(skew) */
+  }
+}
+

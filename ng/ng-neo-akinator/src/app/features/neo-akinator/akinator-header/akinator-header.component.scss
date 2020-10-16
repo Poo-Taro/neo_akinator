@@ -1,0 +1,31 @@
+/*
+ アキネーターヘッダスタイル
+
+ created on 2020/03/14
+ author Taro Suzuki
+*/
+
+
+.akinator-header {
+  width: 100%;
+  height: 70px;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  .header-item1 {
+    width: 100%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .header-item2 {
+    width: 100%;
+    height: 20%;
+    border-radius: 0 0 50% 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+
