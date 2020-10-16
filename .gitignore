@@ -1,0 +1,11 @@
+# no git manage files
+
+# Django
+dj\djneoakinator\venv
+dj\djneoakinator\
+
+#Angular
+ng\ng-neo-akinator\node_modules
+ng\ng-neo-akinator\dist
+
+

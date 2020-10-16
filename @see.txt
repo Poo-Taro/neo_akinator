@@ -1,0 +1,27 @@
+
+■Angular + electron の環境構築
+http://suzaku-tec.hatenadiary.jp/entry/2019/09/16/181129
+
+
+■PowerShell のスクリプトが実行できない場合の対処方法
+https://qiita.com/Targityen/items/3d2e0b5b0b7b04963750
+
+
+■venv --- 仮想環境の作成
+https://docs.python.org/ja/3/library/venv.html
+
+
+■プログラムを終了させる！Pythonでexitを使う方法【初心者向け】
+https://techacademy.jp/magazine/15831
+
+
+■Python 3.6.8（旧バージョン）のインストール（Windows上）
+https://www.kkaneko.jp/tools/win/python36.html
+
+
+
+■AnacondaでPythonのVersionを切り替える方法とよく使うコマンド一覧
+https://www.st-hakky-blog.com/entry/2018/12/27/180920
+
+
+
